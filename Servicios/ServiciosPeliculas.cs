@@ -21,6 +21,21 @@ public static class ServicioPeli
 
     public static void Add(Pelicula obj)
     {
+        if (obj == null)
+        {
+            return;
+        }
         Peliculas.Add(obj);
+    }
+
+    public static Pelicula? Get(int codigo) => Peliculas.FirstOrDefault(x => x.Código == codigo);
+
+    public static void Eliminar(int codigo)
+    {
+        var peliABorrar = Get(codigo);
+        if (peliABorrar != null)
+        {
+            Peliculas.Remove(peliABorrar);
+        }
     }
 }

@@ -18650,6 +18650,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\fgonz\\OneDrive\\Escritorio\\Análisis en sistemas - ISTEA\\2023\\HP\\Clase 3\\Pages\\DetallePeli.cshtml",
+      "TargetPath": "Pages\\DetallePeli.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\fgonz\\OneDrive\\Escritorio\\Análisis en sistemas - ISTEA\\2023\\HP\\Clase 3\\Pages\\Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
       "FileKind": "mvc"

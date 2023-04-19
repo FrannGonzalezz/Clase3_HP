@@ -1,0 +1,30 @@
+﻿@page
+@model Clase_3.Pages.DetallePeliModel
+@{
+}
+
+<h2>@Model.DetallePeli.Nombre</h2>
+
+<span></span>
+<span></span>
+
+<div>
+    <span>Género: </span>
+    <span>@Model.DetallePeli.Género</span><span>.</span>
+</div>
+<div>
+    <span>Duración: </span>
+    <span>@Model.DetallePeli.Duración</span><span> minutos.</span>
+</div>
+<div>
+    <span>Puntuación: </span>
+    <span>@Model.DetallePeli.Puntuación</span><span> estrellas.</span>
+</div>
+
+<form 
+    method="post" 
+    asp-page-handler ="delete"
+    asp-route-codigo ="@Model.DetallePeli.Código"
+    onsubmit="return confirm('Estas seguro que desea eliminar esta película?')">
+    <button type="submit" class="btn-btn-danger">Eliminar</button>
+</form>

@@ -4,9 +4,19 @@
     ViewData["Title"] = "Películas 2023";
 }
 
-<h1>@ViewData["Title"]</h1>
-<h2></h2>
 
+<h2>Listado de películas actualizado</h2>
+<ul>
+    @foreach (var peli in Model.ListaPeliculas)
+    {
+        <li><a asp-page="DetallePeli" asp-route-codigo ="@peli.Código">@peli.Nombre</a> ----  Duración: @peli.Duración minutos</li>
+    }
+</ul>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
 <h2>Formulario para cargar películas</h2>
 
 <form method="post">
@@ -32,12 +42,3 @@
   </div>
   <button type="submit" class="btn btn-primary">Cargar Pelicula</button>
 </form>
-
-<h1></h1>
-<h2>Listado de películas actualizado</h2>
-<ul>
-    @foreach (var peli in Model.ListaPeliculas)
-    {
-        <li>Código: @peli.Código, Nombre: @peli.Nombre, Género: @peli.Género, Duración: @peli.Duración minutos, Puntuación: @peli.Puntuación estrellas</li>
-    }
-</ul>
