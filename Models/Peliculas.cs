@@ -1,8 +1,8 @@
 namespace Clase_3.Models;
 
-    public class Pelicula
+public class Pelicula
 {
-    public string Código { get; set; }
+    public int Código { get; set; }
 
     public string Nombre { get; set; }
 
@@ -10,4 +10,5 @@ namespace Clase_3.Models;
 
     public int Duración { get; set; }
 
+    public double Puntuación { get; set; }
 }

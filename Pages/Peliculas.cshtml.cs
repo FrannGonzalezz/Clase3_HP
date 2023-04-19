@@ -1,19 +1,24 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Clase_3.Models;
+using Clase_3.Servicios;
 
 namespace Clase_3.Pages
 {
     public class PeliculasModel : PageModel
     {
-        private readonly ILogger<PeliculasModel> _logger;
 
-        public PeliculasModel(ILogger<PeliculasModel> logger)
+        public List<Pelicula> ListaPeliculas { get; set; }
+
+
+        public PeliculasModel()
         {
-            _logger = logger;
+
         }
 
         public void OnGet()
         {
+            ListaPeliculas = ServicioPeli.GetAll();
         }
     }
 }
