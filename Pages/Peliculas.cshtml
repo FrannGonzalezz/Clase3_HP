@@ -5,4 +5,39 @@
 }
 
 <h1>@ViewData["Title"]</h1>
+<h2></h2>
 
+<h2>Formulario para cargar películas</h2>
+
+<form method="post">
+  <div class="mb-3">
+    <label asp-for="NuevaPelicula.Código" class="form-label"></label>
+    <input type="text" class="form-control" asp-for="NuevaPelicula.Código">
+  </div>
+  <div class="mb-3">
+    <label asp-for="NuevaPelicula.Nombre" class="form-label"></label>
+    <input type="text" class="form-control" asp-for="NuevaPelicula.Nombre">
+  </div>
+  <div class="mb-3">
+    <label asp-for="NuevaPelicula.Género" class="form-label"></label>
+    <input type="text" class="form-control" asp-for="NuevaPelicula.Género">
+  </div>
+  <div class="mb-3">
+    <label asp-for="NuevaPelicula.Duración" class="form-label"></label>
+    <input type="text" class="form-control" asp-for="NuevaPelicula.Duración">
+  </div>
+  <div class="mb-3">
+    <label asp-for="NuevaPelicula.Puntuación" class="form-label"></label>
+    <input type="text" class="form-control" asp-for="NuevaPelicula.Puntuación">
+  </div>
+  <button type="submit" class="btn btn-primary">Cargar Pelicula</button>
+</form>
+
+<h1></h1>
+<h2>Listado de películas actualizado</h2>
+<ul>
+    @foreach (var peli in Model.ListaPeliculas)
+    {
+        <li>Código: @peli.Código, Nombre: @peli.Nombre, Género: @peli.Género, Duración: @peli.Duración minutos, Puntuación: @peli.Puntuación estrellas</li>
+    }
+</ul>
